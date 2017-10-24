@@ -1,0 +1,33 @@
+<a href="/admin/logout/">Logout</a>
+</br>
+</br>
+
+{% if actionCode %}
+<b>Action Code:</b> <span id="actionCode">{{actionCode}}</span>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <div>{{ form.as_p}}</div>
+    <input type="submit" value="Submit"/>
+</form>
+
+{% if services %}
+<table>
+    <tr>
+        <th>Field1</th>
+        <th>Field2</th>
+        <th>Field3</th>
+        <th>Field4</th>
+        <th>Field5</th>
+    </tr>
+    {% for service in services%}
+    <tr>
+        <td>{{ service.input1 }}</td>
+        <td>{{ service.input2 }}</td>
+        <td>{{ service.input3 }}</td>
+        <td>{{ service.input4 }}</td>
+        <td>{{ service.input5 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif%}
