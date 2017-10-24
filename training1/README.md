@@ -28,5 +28,5 @@ http://zeynep.ahmetdal.org/training1/api/islem/uygulamaBazliDetaySorgu/?applicat
 
 * Take some listing actions and it will give you a action code
 
-* Make request to the log query REST API with the url above.
+* Make request to the log query REST API with the url above and see everything is OK.
 
